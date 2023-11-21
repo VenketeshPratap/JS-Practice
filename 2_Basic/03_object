@@ -1,0 +1,24 @@
+//singleton
+//object.create
+
+//object literals
+const symb1=Symbol("Key1");
+
+const JSUSER={
+    name:"Venketesh",
+    "full name":"Venketesh Pratap Mall",
+    [symb1]:"mykey1",
+    phone:887421005,
+    email:"venketeshmall2@gmail.com"
+}
+
+console.log(JSUSER.email);
+console.log(JSUSER["email"]);
+console.log(JSUSER["full name"]);
+console.log(JSUSER);
+
+//changing the object value and freezed it (frreze() helps to make object immutable, no changes will accept)
+JSUSER.email="venk2319@gmail.com";
+Object.freeze(JSUSER);
+JSUSER.email="vmall2319@gmail.com";
+console.log(JSUSER.email);
